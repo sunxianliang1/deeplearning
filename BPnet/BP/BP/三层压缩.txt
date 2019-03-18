@@ -1,0 +1,129 @@
+rate=0.010000,LayerDim=3  init=0.100000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 85.983333%,err1 is 14.016667%,err2 is 0.000000%
+In Test NetWork!The correct rate is 66.400000%,err1 is 27.900000%,err2 is 5.700000%
+---------------------------------------------------------------------
+
+rate=0.005000,LayerDim=3  init=0.100000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 62.066667%,err1 is 37.933333%,err2 is 0.000000%
+In Test NetWork!The correct rate is 51.500000%,err1 is 44.100000%,err2 is 4.400000%
+---------------------------------------------------------------------
+
+rate=0.007500,LayerDim=3  init=0.100000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 93.000000%,err1 is 7.000000%,err2 is 0.000000%
+In Test NetWork!The correct rate is 72.700000%,err1 is 20.500000%,err2 is 6.800000%
+---------------------------------------------------------------------
+
+rate=0.008500,LayerDim=3  init=0.100000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 71.750000%,err1 is 28.250000%,err2 is 0.000000%
+In Test NetWork!The correct rate is 57.600000%,err1 is 37.800000%,err2 is 4.600000%
+---------------------------------------------------------------------
+
+rate=0.009000,LayerDim=3  init=0.100000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 74.916667%,err1 is 25.083333%,err2 is 0.000000%
+In Test NetWork!The correct rate is 59.600000%,err1 is 34.500000%,err2 is 5.900000%
+---------------------------------------------------------------------
+
+rate=0.001100,LayerDim=3  init=0.100000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 69.933333%,err1 is 30.066667%,err2 is 0.000000%
+In Test NetWork!The correct rate is 60.100000%,err1 is 34.500000%,err2 is 5.400000%
+---------------------------------------------------------------------
+
+rate=0.001000,LayerDim=3  init=0.500000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 80.633333%,err1 is 19.366667%,err2 is 0.000000%
+In Test NetWork!The correct rate is 66.500000%,err1 is 26.700000%,err2 is 6.800000%
+---------------------------------------------------------------------
+
+rate=0.001000,LayerDim=3  init=0.300000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 73.083333%,err1 is 26.916667%,err2 is 0.000000%
+In Test NetWork!The correct rate is 60.900000%,err1 is 33.100000%,err2 is 6.000000%
+---------------------------------------------------------------------
+
+rate=0.001000,LayerDim=3  init=0.100000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 79.600000%,err1 is 20.400000%,err2 is 0.000000%
+In Test NetWork!The correct rate is 64.200000%,err1 is 28.700000%,err2 is 7.100000%
+---------------------------------------------------------------------
+
+rate=0.001000,LayerDim=3  init=0.100000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 73.300000%,err1 is 26.700000%,err2 is 0.000000%
+In Test NetWork!The correct rate is 60.600000%,err1 is 32.900000%,err2 is 6.500000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.100000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 93.716667%,err1 is 6.283333%,err2 is 0.000000%
+In Test NetWork!The correct rate is 73.700000%,err1 is 19.200000%,err2 is 7.100000%
+---------------------------------------------------------------------
+
+rate=0.011000,LayerDim=3  init=0.100000
+{1: 784, 2: 100, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 73.333333%,err1 is 26.666667%,err2 is 0.000000%
+In Test NetWork!The correct rate is 58.500000%,err1 is 37.300000%,err2 is 4.200000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.100000
+{1: 784, 2: 86, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 94.766667%,err1 is 5.233333%,err2 is 0.000000%
+In Test NetWork!The correct rate is 74.400000%,err1 is 18.100000%,err2 is 7.500000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.100000
+{1: 784, 2: 86, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 83.133333%,err1 is 16.866667%,err2 is 0.000000%
+In Test NetWork!The correct rate is 63.800000%,err1 is 31.500000%,err2 is 4.700000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.100000
+{1: 784, 2: 86, 3: 10}
+Train samples is 6000
+In trainning 100 times NetWork,The correct rate is 94.633333%,err1 is 5.366667%,err2 is 0.000000%
+In Test NetWork!The correct rate is 73.900000%,err1 is 18.700000%,err2 is 7.400000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.100000
+{1: 784, 2: 86, 3: 10}
+Train samples is 10000
+In trainning 54 times NetWork,The correct rate is 95.010000%,err1 is 4.990000%,err2 is 0.000000%
+In Test NetWork!The correct rate is 77.820000%,err1 is 15.840000%,err2 is 6.300000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.100000
+{1: 784, 2: 86, 3: 10}
+Train samples is 15000
+In trainning 61 times NetWork,The correct rate is 95.020000%,err1 is 4.966667%,err2 is 0.013333%
+In Test NetWork!The correct rate is 79.080000%,err1 is 15.680000%,err2 is 5.240000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.100000
+{1: 784, 2: 86, 3: 10}
+Train samples is 60000
+In trainning 100 times NetWork,The correct rate is 93.906667%,err1 is 6.066667%,err2 is 0.026667%
+In Test NetWork!The correct rate is 86.300000%,err1 is 11.270000%,err2 is 2.430000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.100000
+{1: 784, 2: 86, 3: 10}
+Train samples is 60000

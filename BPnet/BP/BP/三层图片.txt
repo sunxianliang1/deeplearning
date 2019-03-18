@@ -1,0 +1,98 @@
+rate=0.050000,LayerDim=3
+{1: 256, 2: 50, 3: 10}	init*1
+In trainning NetWork,The correct rate is 0.000000%,err1 is 100.000000%,err2 is 0.000000%
+In Test NetWork!The correct rate is 0.000000%,err1 is 100.000000%,err2 is 0.000000%
+---------------------------------------------------------------------
+
+rate=0.025000,LayerDim=3
+{1: 256, 2: 50, 3: 10}	init*1
+In trainning NetWork,The correct rate is 0.000000%,err1 is 100.000000%,err2 is 0.000000%
+In Test NetWork!The correct rate is 0.000000%,err1 is 100.000000%,err2 is 0.000000%
+---------------------------------------------------------------------
+
+rate=0.015000,LayerDim=3
+{1: 256, 2: 50, 3: 10}	init*1
+In trainning NetWork,The correct rate is 43.120000%,err1 is 53.440000%,err2 is 3.440000%
+In Test NetWork!The correct rate is 42.833333%,err1 is 55.000000%,err2 is 2.166667%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3
+{1: 256, 2: 50, 3: 10}	init*1
+In trainning NetWork,The correct rate is 54.060000%,err1 is 44.420000%,err2 is 1.520000%
+In Test NetWork!The correct rate is 53.250000%,err1 is 44.833333%,err2 is 1.916667%
+---------------------------------------------------------------------
+
+rate=0.005000,LayerDim=3
+{1: 256, 2: 50, 3: 10}	init*1
+In trainning NetWork,The correct rate is 39.820000%,err1 is 53.060000%,err2 is 7.120000%
+In Test NetWork!The correct rate is 40.083333%,err1 is 53.416667%,err2 is 6.500000%
+---------------------------------------------------------------------
+
+rate=0.005000,LayerDim=3
+{1: 256, 2: 50, 3: 10}   init*1
+In trainning 100times NetWork,The correct rate is 58.340000%,err1 is 41.300000%,err2 is 0.360000%
+In Test NetWork!The correct rate is 54.166667%,err1 is 43.750000%,err2 is 2.083333%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3
+{1: 256, 2: 50, 3: 10}   init*1
+In trainning 100 times NetWork,The correct rate is 77.660000%,err1 is 22.160000%,err2 is 0.180000%
+In Test NetWork!The correct rate is 73.833333%,err1 is 23.916667%,err2 is 2.250000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3
+{1: 256, 2: 50, 3: 10}       init*0.1
+In trainning 100 times NetWork,The correct rate is 86.900000%,err1 is 12.880000%,err2 is 0.220000%
+In Test NetWork!The correct rate is 82.083333%,err1 is 15.333333%,err2 is 2.583333%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.050000
+{1: 256, 2: 50, 3: 10}
+In trainning 100 times NetWork,The correct rate is 77.700000%,err1 is 21.980000%,err2 is 0.320000%
+In Test NetWork!The correct rate is 73.250000%,err1 is 24.000000%,err2 is 2.750000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.050000
+{1: 256, 2: 50, 3: 10}
+In trainning 100 times NetWork,The correct rate is 77.700000%,err1 is 21.980000%,err2 is 0.320000%
+In Test NetWork!The correct rate is 73.250000%,err1 is 24.000000%,err2 is 2.750000%
+---------------------------------------------------------------------
+
+rate=0.010000,LayerDim=3  init=0.050000
+{1: 256, 2: 50, 3: 10}
+In trainning 100 times NetWork,The correct rate is 77.700000%,err1 is 21.980000%,err2 is 0.320000%
+In Test NetWork!The correct rate is 73.250000%,err1 is 24.000000%,err2 is 2.750000%
+---------------------------------------------------------------------
+
+rate=0.008000,LayerDim=3  init=0.100000
+{1: 256, 2: 50, 3: 10}
+In trainning 50 times NetWork,The correct rate is 95.340000%,err1 is 4.200000%,err2 is 0.460000%
+In Test NetWork!The correct rate is 92.166667%,err1 is 5.583333%,err2 is 2.250000%
+---------------------------------------------------------------------
+
+rate=0.008000,LayerDim=3  init=0.100000
+{1: 256, 2: 50, 3: 10}
+In trainning 100 times NetWork,The correct rate is 96.420000%,err1 is 3.280000%,err2 is 0.300000%
+In Test NetWork!The correct rate is 91.750000%,err1 is 5.583333%,err2 is 2.666667%
+---------------------------------------------------------------------
+
+rate=0.008000,LayerDim=3  init=0.100000
+{1: 256, 2: 50, 3: 10}
+In trainning 200 times NetWork,The correct rate is 97.760000%,err1 is 2.240000%,err2 is 0.000000%
+In Test NetWork!The correct rate is 92.666667%,err1 is 5.416667%,err2 is 1.916667%
+---------------------------------------------------------------------
+
+rate=0.008000,LayerDim=3  init=0.100000
+{1: 256, 2: 50, 3: 10}
+In trainning 400 times NetWork,The correct rate is 99.620000%,err1 is 0.380000%,err2 is 0.000000%
+In Test NetWork!The correct rate is 93.916667%,err1 is 4.083333%,err2 is 2.000000%
+---------------------------------------------------------------------
+
+rate=0.008000,LayerDim=3  init=0.100000
+{1: 256, 2: 50, 3: 10}
+rate=0.008000,LayerDim=3  init=0.100000
+{1: 256, 2: 50, 3: 10}
+In trainning 400 times NetWork,The correct rate is 99.620000%,err1 is 0.380000%,err2 is 0.000000%
+In Test NetWork!The correct rate is 93.916667%,err1 is 4.083333%,err2 is 2.000000%
+---------------------------------------------------------------------
+
