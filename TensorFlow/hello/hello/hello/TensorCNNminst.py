@@ -130,4 +130,4 @@ for i in range(1000): #开始训练模型，循环训练5000次
 print("test accuracy %f" %accuracy.eval(session = sess,feed_dict = {x:mnist.TestImg, y_:mnist.TestLabel10,keep_prob:1.0})) #神经元输出保持不变的概率 keep_prob 为 1，即不变，一直保持输出
 
 end = time.clock() #计算程序结束时间
-print("running time is %f s" % (end-start))
+print("running time is %f s" %(end-start))
