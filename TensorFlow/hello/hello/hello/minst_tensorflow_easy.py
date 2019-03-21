@@ -17,7 +17,7 @@ if __name__=='__main__':
     sess = tf.InteractiveSession()
     init = tf.global_variables_initializer().run()
 
-    mnist=MinstData.MinstData("E:\深度学习\训练集数据\手写字符\压缩版")
+    mnist=MinstData.MinstData("E:\deeplearning\训练集数据\手写字符\压缩版")
     for _ in range(1000):
         batch_xs, batch_ys = mnist.next_batch(100)
         sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})

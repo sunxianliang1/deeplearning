@@ -18,7 +18,7 @@ if __name__=='__main__':
     sess = tf.Session()
     sess.run(tf.global_variables_initializer())
 
-    mnist=MinstData.MinstData("E:\深度学习\训练集数据\手写字符\压缩版")
+    mnist=MinstData.MinstData("E:\deeplearning\训练集数据\手写字符\压缩版")
     for _ in range(1000):
         batch_xs, batch_ys = mnist.next_batch(100)
         sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
@@ -29,14 +29,14 @@ if __name__=='__main__':
     #right=accuracy.eval(session = sess,feed_dict={x: mnist.TestImg, y_: mnist.TestLabel10})
     print(right)
 
-    for i in range(0, mnist.TestLen):
-        result = sess.run(correct_prediction, feed_dict={x: np.array([mnist.TestImg[i]]), y_: np.array([mnist.TestLabel10[i]])})
-        if not result:
-            print('预测的值是：',sess.run(y, feed_dict={x: np.array([mnist.TestImg[i]]), y_: np.array([mnist.TestLabel10[i]])}))
-            print('实际的值是：',sess.run(y_,feed_dict={x: np.array([mnist.TestImg[i]]), y_: np.array([mnist.TestLabel10[i]])}))
-            one_pic_arr = np.reshape(mnist.TestImg[i], (28, 28))
-            pic_matrix = np.matrix(one_pic_arr, dtype="float")
-            plt.imshow(pic_matrix)
-            plt.show()
-            continue
-
+    #for i in range(0, mnist.TestLen):
+    #    result = sess.run(correct_prediction, feed_dict={x: np.array([mnist.TestImg[i]]), y_: np.array([mnist.TestLabel10[i]])})
+    #    if not result:
+    #        print('预测的值是：',sess.run(y, feed_dict={x: np.array([mnist.TestImg[i]]), y_: np.array([mnist.TestLabel10[i]])}))
+    #        print('实际的值是：',sess.run(y_,feed_dict={x: np.array([mnist.TestImg[i]]), y_: np.array([mnist.TestLabel10[i]])}))
+    #        one_pic_arr = np.reshape(mnist.TestImg[i], (28, 28))
+    #        pic_matrix = np.matrix(one_pic_arr, dtype="float")
+    #        plt.imshow(pic_matrix)
+    #        plt.show()
+    #        continue
+    #sess.close()

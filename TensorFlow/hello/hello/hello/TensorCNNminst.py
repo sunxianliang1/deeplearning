@@ -117,7 +117,7 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction,"float"))
 sess = tf.Session() #启动创建的模型
 #sess.run(tf.initialize_all_variables()) #旧版本
 sess.run(tf.global_variables_initializer()) #初始化变量
-mnist=MinstData.MinstData("E:\深度学习\训练集数据\手写字符\压缩版")
+mnist=MinstData.MinstData("E:\deeplearning\训练集数据\手写字符\压缩版")
 
 for i in range(1000): #开始训练模型，循环训练5000次
     batch = mnist.next_batch(100) #batch大小设置为50
@@ -130,4 +130,4 @@ for i in range(1000): #开始训练模型，循环训练5000次
 print("test accuracy %f" %accuracy.eval(session = sess,feed_dict = {x:mnist.TestImg, y_:mnist.TestLabel10,keep_prob:1.0})) #神经元输出保持不变的概率 keep_prob 为 1，即不变，一直保持输出
 
 end = time.clock() #计算程序结束时间
-print("running time is %f s") % (end-start)
+print("running time is %f s" % (end-start))
