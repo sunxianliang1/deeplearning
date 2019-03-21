@@ -1,25 +1,24 @@
-#coding:utf-8
+ï»¿#coding:utf-8
 
 import os
 import struct
 import numpy as np
 import matplotlib.pyplot as plt
 import copy
-
 class BPnet:
     def __init__(self,path,rate=0.010):
-        self.TrainImg,self.TrainLabel,self.TrainLen=self.LoadMnist(path)     #ÑµÁ·¼¯
-        self.TestImg,self.TestLabel,self.TestLen=self.LoadMnist(path,"t10k") #²âÊÔ¼¯
+        self.TrainImg,self.TrainLabel,self.TrainLen=self.LoadMnist(path)     #è®­ç»ƒé›†
+        self.TestImg,self.TestLabel,self.TestLen=self.LoadMnist(path,"t10k") #æµ‹è¯•é›†
         self.LayerLen={1:784,2:86,3:10}
         self.LayerDim=3
-        self.w={} #È¨Öµ
-        self.b={} #Æ«²î
-        self.a={} #½á¹û
-        self.z={} #Êä³ö
-        self.delta={} #Æ«²î¶ÔzµÄµ¼Êı
-        self.dZ={} #sigmodº¯Êı¹ØÓÚzµÄµ¼Êı
-        self.out=np.zeros([1,10])#Ñù±¾Êä³ö
-        self.rate=rate#Ñ§Ï°ËÙÂÊ
+        self.w={} #æƒå€¼
+        self.b={} #åå·®
+        self.a={} #ç»“æœ
+        self.z={} #è¾“å‡º
+        self.delta={} #åå·®å¯¹zçš„å¯¼æ•°
+        self.dZ={} #sigmodå‡½æ•°å…³äºzçš„å¯¼æ•°
+        self.out=np.zeros([1,10])#æ ·æœ¬è¾“å‡º
+        self.rate=rate#å­¦ä¹ é€Ÿç‡
         self.TrainNum=60000
         self.begin=0
         init=0.1
@@ -30,7 +29,7 @@ class BPnet:
             self.z[i]=np.zeros([1,self.LayerLen[i]])
             self.dZ[i]=np.zeros([1,self.LayerLen[i]])
             self.delta[i]=np.zeros([1,self.LayerLen[i]])
-        fo = open("Èı²ãÑ¹Ëõnew.txt", "a")
+        fo = open("ä¸‰å±‚å‹ç¼©.txt", "a")
         print("rate=%f,LayerDim=%d  init=%f"%(rate,self.LayerDim,init),file=fo)
         print(self.LayerLen,file=fo)
         print("Train samples is %d"%(self.TrainNum),file=fo)
@@ -41,7 +40,8 @@ class BPnet:
             for SampleIter in range(self.begin,self.TrainNum+self.begin):
                 #self.PrintImg(SampleIter)
                 self.a[1]=copy.deepcopy(self.TrainImg[SampleIter])/256
-                self.a[1].shape=(1,-1)#²»ÄÜÓÃreshape£¬reshape²»¸Ä±ä±¾Éí£¬Öµ¸Ä±ä·µ»ØÖµ
+                self.a[1].shape=(1,-1)#ä¸èƒ½ç”¨reshapeï¼Œreshapeä¸æ”¹å˜æœ¬èº«ï¼Œå€¼æ”¹å˜è¿”å›å€¼
+
                 self.out=np.zeros([1,10])
                 self.out[0,self.TrainLabel[SampleIter]]=1
                 lasterr=10000
@@ -59,7 +59,7 @@ class BPnet:
             print("This is the %d th trainning NetWork!The correct rate is %f%%,err1 is %f%%,err2 is %f%%" %(TrainIter,correct,err1,err2))
             if correct>95:
                 break;   
-        fo = open("Èı²ãÑ¹Ëõ.txt", "a")
+        fo = open("ä¸‰å±‚å‹ç¼©.txt", "a")
         print("In trainning %d times NetWork,The correct rate is %f%%,err1 is %f%%,err2 is %f%%" %(TrainIter,correct,err1,err2),file=fo)
         fo.close()  
 
@@ -70,7 +70,7 @@ class BPnet:
         num=self.TrainNum//6
         for SampleIter in range(num):
             self.a[1]=copy.deepcopy(self.TestImg[SampleIter])/256
-            self.a[1].shape=(1,-1)#²»ÄÜÓÃreshape£¬reshape²»¸Ä±ä±¾Éí£¬Öµ¸Ä±ä·µ»ØÖµ
+            self.a[1].shape=(1,-1)#ä¸èƒ½ç”¨reshapeï¼Œreshapeä¸æ”¹å˜æœ¬èº«ï¼Œå€¼æ”¹å˜è¿”å›å€¼
             self.out=np.zeros([1,10])
             self.out[0,self.TestLabel[SampleIter]]=1
             self.ForwardTransfer()
@@ -85,7 +85,7 @@ class BPnet:
             else:
                 err2+=1
         print("In Test NetWork!The correct rate is %f%%,err1 is %f%%,err2 is %f%%" %(correct/num*100,err1/num*100,err2/num*100))
-        fo = open("Èı²ãÑ¹Ëõ.txt", "a")
+        fo = open("ä¸‰å±‚å‹ç¼©.txt", "a")
         print("In Test NetWork!The correct rate is %f%%,err1 is %f%%,err2 is %f%%" %(correct/num*100,err1/num*100,err2/num*100),file=fo)
         print("---------------------------------------------------------------------\n",file=fo)
         fo.close()
@@ -96,7 +96,7 @@ class BPnet:
         err2=0
         for SampleIter in range(self.begin,self.TrainNum+self.begin):
             self.a[1]=copy.deepcopy(self.TrainImg[SampleIter])/256
-            self.a[1].shape=(1,-1)#²»ÄÜÓÃreshape£¬reshape²»¸Ä±ä±¾Éí£¬Öµ¸Ä±ä·µ»ØÖµ
+            self.a[1].shape=(1,-1)#ä¸èƒ½ç”¨reshapeï¼Œreshapeä¸æ”¹å˜æœ¬èº«ï¼Œå€¼æ”¹å˜è¿”å›å€¼
             self.out=np.zeros([1,10])
             self.out[0,self.TrainLabel[SampleIter]]=1
             self.ForwardTransfer()
@@ -134,7 +134,7 @@ class BPnet:
         dEdW={}
         dEdb={}
         for i in range(2,self.LayerDim+1):
-            #ÕâÀï²»ÄÜÓÃ.T£¬»á½«1*nµÄ¾ØÕó±äÎª(n,)µÄ¾ØÕó£¬Î¬¶È»á¼õÒ»
+            #è¿™é‡Œä¸èƒ½ç”¨.Tï¼Œä¼šå°†1*nçš„çŸ©é˜µå˜ä¸º(n,)çš„çŸ©é˜µï¼Œç»´åº¦ä¼šå‡ä¸€
             dEdW[i]=np.dot(self.a[i-1].transpose((1,0)),self.delta[i])
             dEdb[i]=self.delta[i]
         #updata w and b
@@ -172,16 +172,17 @@ class BPnet:
         plt.show()
 
     def sigmod(self,z):
-        """¼¤»îº¯Êısigmod"""
+        """æ¿€æ´»å‡½æ•°sigmod"""
         return 1/(1 + np.exp(-z))
     def relu(self,z):
-        """¼¤»îº¯Êırelu"""
+        """æ¿€æ´»å‡½æ•°relu"""
         return np.array(z>0)*z
     
     
         
 
 if __name__=='__main__':
-    BP=BPnet("E:\Éî¶ÈÑ§Ï°\ÑµÁ·¼¯Êı¾İ\ÊÖĞ´×Ö·û\Ñ¹Ëõ°æ")
+    BP=BPnet("E:\æ·±åº¦å­¦ä¹ \è®­ç»ƒé›†æ•°æ®\æ‰‹å†™å­—ç¬¦\å‹ç¼©ç‰ˆ")
     BP.Train()
     BP.Test()
+

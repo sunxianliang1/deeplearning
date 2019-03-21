@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>49ed349c-858e-4827-9012-f1e414ef861e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>minst_tensorflow_easy.py</StartupFile>
+    <StartupFile>TensorCNNminst.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -33,7 +33,10 @@
     <Compile Include="module1.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="module2.py">
+    <Compile Include="TensorCNNminst.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TensorDNNminst.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
