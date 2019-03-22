@@ -7,11 +7,11 @@ import MinstData
 初始化为一个接近0的很小的正数
 """
 def weight_variable(shape):
-    initial = tf.truncated_normal(shape, stddev = 0.1)
+    initial = tf.truncated_normal(shape, stddev = 0.05)
     return tf.Variable(initial)
 
 def bias_variable(shape):
-    initial = tf.constant(0.1, shape = shape)
+    initial = tf.constant(0.05, shape = shape)
     return tf.Variable(initial)
 
 """
