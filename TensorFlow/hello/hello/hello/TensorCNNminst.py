@@ -7,10 +7,13 @@ import MinstData
 初始化为一个接近0的很小的正数
 """
 def weight_variable(shape):
+    # 添加一些随机噪声来避免完全对称，使用截断正态分布，标准差为0.1
     initial = tf.truncated_normal(shape, stddev = 0.05)
     return tf.Variable(initial)
 
+# 偏置量初始化函数
 def bias_variable(shape):
+    # 为偏置量增加一个很小的正值(0.1)，避免死亡节点
     initial = tf.constant(0.05, shape = shape)
     return tf.Variable(initial)
 
@@ -23,6 +26,7 @@ def conv2d(x, W):
     # tf.nn.conv2d(input, filter, strides, padding, use_cudnn_on_gpu=None, data_format=None, name=None)
     # x(input)  : [batch, in_height, in_width, in_channels]
     # W(filter) : [filter_height, filter_width, in_channels, out_channels]
+    # W 卷积参数，例如[5,5,1,32]：5,5代表卷积核尺寸、1代表通道数：黑白图像为1，彩色图像为3、32代表卷积核数量也就是要提取的特征数量
     # strides   : The stride of the sliding window for each dimension of input.
     #             For the most common case of the same horizontal and vertices strides, strides = [1, stride, stride, 1]
 
