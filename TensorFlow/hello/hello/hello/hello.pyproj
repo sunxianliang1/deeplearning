@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>49ed349c-858e-4827-9012-f1e414ef861e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>KerasCNNminst.py</StartupFile>
+    <StartupFile>KerasCNNmnist.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="hello.py" />
+    <Compile Include="KerasAENmnist.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KerasCNNmnist.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MinstData.py">
       <SubType>Code</SubType>
     </Compile>
@@ -30,13 +36,16 @@
     <Compile Include="minst_tensorflow_easy.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="KerasCNNminst.py">
+    <Compile Include="KerasBPminst.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TensorCNNminst.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TensorDNNminst.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TensorFlowEnvironment.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
