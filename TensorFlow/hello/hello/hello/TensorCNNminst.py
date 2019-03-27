@@ -2,6 +2,8 @@
 import tensorflow as tf
 import time
 import MinstData
+import os
+
 """
 权重初始化
 初始化为一个接近0的很小的正数
@@ -118,12 +120,14 @@ train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy) #使用adam优
 correct_prediction = tf.equal(tf.argmax(y_conv,1), tf.argmax(y_,1)) #判断预测标签和实际标签是否匹配
 accuracy = tf.reduce_mean(tf.cast(correct_prediction,"float"))
 
+print("begin")
 sess = tf.Session() #启动创建的模型
 #sess.run(tf.initialize_all_variables()) #旧版本
 sess.run(tf.global_variables_initializer()) #初始化变量
 mnist=MinstData.MinstData("E:\deeplearning\训练集数据\手写字符\压缩版")
 
 for i in range(1000): #开始训练模型，循环训练5000次
+    #print(i)
     batch = mnist.next_batch(100) #batch大小设置为50
     if i % 100 == 0:
         train_accuracy = accuracy.eval(session = sess,feed_dict = {x:batch[0], y_:batch[1], keep_prob:1.0})
