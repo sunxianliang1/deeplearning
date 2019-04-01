@@ -12,7 +12,7 @@ x_train, x_test = x_train / 255.0, x_test / 255.0
 x_train.shape=(-1,784)
 x_test.shape=(-1,784)
 
-encoding_dim = 32  # 32 floats -> compression of factor 24.5, assuming the input is 784 floats
+encoding_dim = 10  # 32 floats -> compression of factor 24.5, assuming the input is 784 floats
 
 # this is our input placeholder
 input_img = Input(shape=(784,))
