@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>49ed349c-858e-4827-9012-f1e414ef861e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>KerasCNNmnist.py</StartupFile>
+    <StartupFile>KerasAENmnist1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="hello.py" />
+    <Compile Include="KerasAENmnist1.py" />
     <Compile Include="KerasAENmnist.py">
       <SubType>Code</SubType>
     </Compile>
