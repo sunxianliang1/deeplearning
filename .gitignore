@@ -9,3 +9,5 @@
 *.pyproj
 *.suo
 
+/ECT/ECT/concentration circle.txt
+/ECT/ECT/__pycache__/loaddata.cpython-36.pyc
