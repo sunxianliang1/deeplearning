@@ -98,9 +98,7 @@ class ECTdata:
                                  
         mp.figure()        
         mp.imshow(point1,cmap='own2')
-        ff=range(0,101,2)
-        aa=np.asarray(ff)/100
-        mp.colorbar(boundaries=aa)
+        mp.colorbar()
         
 
 
