@@ -8,6 +8,8 @@ from tensorflow.keras.layers import LeakyReLU
 from tensorflow.keras.layers import UpSampling2D, Conv2D
 from tensorflow.keras.models import Sequential, Model
 from tensorflow.keras.datasets import mnist
+import tensorflow
+from tensorflow.keras.backend import set_session
 
 class GAN():
     def __init__(self):
@@ -56,7 +58,7 @@ class GAN():
         model.add(Dense(np.prod(self.img_shape), activation='tanh'))
         model.add(Reshape(self.img_shape))
 
-        model.summary()
+        model.summary()#打印网络结构
 
         noise = Input(shape=(self.latent_dim,))
         img = model(noise)
@@ -88,6 +90,9 @@ class GAN():
         X_train = X_train / 127.5 - 1.
         X_train = np.expand_dims(X_train, axis=3)
 
+        config = tensorflow.ConfigProto()
+        config.gpu_options.allow_growth = True  #允许显存增长
+        set_session(tensorflow.Session(config=config))
         # Adversarial ground truths
         valid = np.ones((batch_size, 1))
         fake = np.zeros((batch_size, 1))
@@ -148,7 +153,7 @@ class GAN():
 
 if __name__ == '__main__':
     gan = GAN()
-    gan.train(epochs=30000, batch_size=32, sample_interval=200)
+    gan.train(epochs=3000, batch_size=32, sample_interval=200)
 
 
 
