@@ -30,7 +30,6 @@ class GAN():
         z = Input(shape=(self.latent_dim,))
         img = self.generator(z)
 
-        # For the combined model we will only train the generator
         self.discriminator.trainable = False
 
         # The discriminator takes generated images as input and determines validity
@@ -110,8 +109,9 @@ class GAN():
 
             # Generate a batch of new images
             gen_imgs = self.generator.predict(noise)
-
+            
             # Train the discriminator
+            
             d_loss_real = self.discriminator.train_on_batch(imgs, valid)
             d_loss_fake = self.discriminator.train_on_batch(gen_imgs, fake)
             d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
@@ -121,7 +121,8 @@ class GAN():
             # ---------------------
 
             noise = np.random.normal(0, 1, (batch_size, self.latent_dim))
-
+            # For the combined model we will only train the generator
+            
             # Train the generator (to have the discriminator label samples as valid)
             g_loss = self.combined.train_on_batch(noise, valid)
 
@@ -152,8 +153,9 @@ class GAN():
 
 
 if __name__ == '__main__':
+    tensorflow.logging.set_verbosity(tensorflow.logging.ERROR)
     gan = GAN()
-    gan.train(epochs=3000, batch_size=32, sample_interval=200)
+    gan.train(epochs=1000, batch_size=32, sample_interval=200)
 
 
 
