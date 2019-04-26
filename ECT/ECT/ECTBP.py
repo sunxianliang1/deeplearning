@@ -7,7 +7,7 @@ import matplotlib.pyplot as mp
 from tensorflow.keras.backend import set_session
 class BP:
     def __init__(self,t='fig'):      
-        self.mydata=ECTdata('E:\deeplearning\ECT\数据生成\data')
+        self.mydata=ECTdata('E:\deeplearning\ECT\数据生成\data',5000)
         self.mydata.initsca(t=t)
         print("data init success!")
 
@@ -20,13 +20,13 @@ class BP:
             tensorflow.session.close()
 
         input=Input(shape=(self.mydata.capsize,))
-        #decoded = Dense(50, activation='relu')(input)
-        #decoded1 = Dense(100, activation='relu')(decoded)
+        decoded = Dense(256, activation='relu')(input)
+        decoded1 = Dense(512, activation='relu')(decoded)
         #decoded2 = Dense(200, activation='relu')(decoded1)
         #decoded3 = Dense(400, activation='relu')(decoded2)
         #output=Dense(self.mydata.imgsize, activation='relu')(decoded3)
-        decoded1 = Dense(600, activation='relu')(input)
-        output=Dense(self.mydata.imgsize, activation='relu')(decoded1)
+        decoded2 = Dense(1024, activation='relu')(decoded1)
+        output=Dense(self.mydata.imgsize, activation='tanh')(decoded2)
 
 
         self.model=Model(inputs=input,outputs=output)
@@ -46,7 +46,7 @@ class BP:
 
 if __name__=='__main__':
     bp=BP(t='tri')
-    bp.train(500)
+    bp.train(50)
     i=0
     while i!=-1:
         i=input("输入图片序号")
